@@ -6,7 +6,7 @@
 <h1 id="module-1-capstone---vending-machine-software">Module 1 Capstone - Vending Machine Software</h1>
 <p>You’re developing an application for the newest vending machine distributor, Umbrella Corp. They’ve released a new vending machine, Vendo-Matic 800, that’s integrated with everyone’s bank accounts, allowing customers to purchase products from their computers for their convenience.</p>
 <h2 id="classes">Classes</h2>
-<p>The core of this application consists of x classes, which you’ll create in the main package <code>corp.umbrella</code>. Make sure to read through the requirements for each class before writing any code.</p>
+<p>The core of this application consists of x classes, which you’ll create in the main package <code>com.techelevator</code>. Make sure to read through the requirements for each class before writing any code.</p>
 <h3 id="step-one-create-the-product-class">Step One: Create the <code>Product</code> class</h3>
 <p>Create a new class called <code>Product.java</code> with the following requirements.</p>
 <h4 id="properties">Properties</h4>
