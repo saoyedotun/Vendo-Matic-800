@@ -65,7 +65,7 @@
 </tr>
 <tr>
 <td><code>Unit1Test</code></td>
-<td>Test cases for Application Class</td>
+<td>Test cases for all Class methods</td>
 </tr>
 <tr>
 <td><code>InventoryTest</code></td>
