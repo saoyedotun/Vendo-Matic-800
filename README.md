@@ -67,7 +67,9 @@
 </table><h2 id="classes">Classes</h2>
 <p>The core of this application consists of 4 packages, product, report, transaction, and vendingmachine and their respective 7 Classes, which you’ll create in the main package <code>com.techelevator</code>. Make sure to read through the requirements for each class before writing any code.</p>
 <h3 id="step-one-create-the-producttype-enum-class-in-the-com.techelevator.product-package">Step One: Create the <code>ProductType</code> Enum class in the <code>com.techelevator.product</code> package</h3>
-<p>Create a new enum class called <code>ProductType.java</code> with the following requirements.</p>
+<p>Create a new enum class called <code>ProductType.java</code> with the following requirements. The enum has 4 constants. Each constant represents a type of product.</p>
+<h4 id="enum-constants">Enum Constants</h4>
+<p><code>CHIP</code>, <code>CANDY</code>, <code>DRINK</code>, <code>GUM</code></p>
 <h4 id="properties">Properties</h4>
 
 <table>
@@ -76,7 +78,6 @@
 <th>Property</th>
 <th>Data Type</th>
 <th>Get</th>
-<th>Set</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -85,14 +86,13 @@
 <td><code>message</code></td>
 <td><code>String</code></td>
 <td>X</td>
-<td></td>
-<td>Lorem ipsor dolor sit ammet</td>
+<td>This variable holds the message each enum type</td>
 </tr>
 </tbody>
 </table><h4 id="constructors">Constructors</h4>
-<p><code>Project</code> must have one constructor that accepts four parameters: <code>name</code>, <code>type</code>, <code>slot</code>, and <code>price</code>.</p>
+<p><code>ProjectType</code> must have one constructor that accepts one parameter: <code>message</code></p>
 <h3 id="step-two-create-the-product-class-in-the-com.techelevator.product-package">Step Two: Create the <code>Product</code> class in the <code>com.techelevator.product</code> package</h3>
-<p>Create a new class called <code>Product.java</code> with the following requirements.</p>
+<p>Create a new class called <code>Product.java</code> with the following requirements. The Product has 6 variables, including the default maximum quantity constant.</p>
 <h4 id="properties-1">Properties</h4>
 
 <table>
@@ -173,8 +173,52 @@
 </tbody>
 </table><p>The <code>dispense</code> method doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
 <p>The <code>isSoldOut</code> method returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
-<h3 id="step-two-create-the-vendingmachine-class">Step Two: Create the <code>VendingMachine</code> class</h3>
-<p>Create a new class called <code>VendingMachine.java</code> with the following requirements.</p>
+<h3 id="step-three-create-the-transaction-class-in-the-com.techelevator.transaction-package">Step Three: Create the <code>Transaction</code> class in the <code>com.techelevator.transaction</code> package</h3>
+<p>Create a new class called <code>Transaction.java</code> with the following requirements.</p>
+<blockquote>
+<p>The <code>Transaction</code> class’s <code>logTransaction</code> method logs a message to a file named <code>Log.txt</code>, prefixed with a timestamp. It uses the <code>SimpleDateFormat</code> class to format the timestamp and handles file writing with <code>PrintWriter</code> and <code>FileWriter</code> in a try-with-resources statement to ensure proper resource management. If an IOException occurs, it is caught and printed to the standard error stream.</p>
+</blockquote>
+<h4 id="methods-1">Methods</h4>
+
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Return Type</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>logTransaction</code></td>
+<td><code>void</code></td>
+<td>message</td>
+</tr>
+</tbody>
+</table><h3 id="step-four-create-the-salesreport-class-in-the-com.techelevator.report-package">Step Four: Create the <code>SalesReport</code> class in the <code>com.techelevator.report</code> package</h3>
+<p>Create a new class called <code>SalesReport.java</code> with the following requirements.</p>
+<blockquote>
+<p>The <code>SalesReport</code> class’s <code>generateReport</code> method generates a sales report file named with a timestamp. It iterates over the provided <code>inventory</code> of products, writes each product’s name and quantity sold to the file, calculates the total sales amount, and writes the total sales to the file. It handles file writing with a try-with-resources statement to ensure proper resource management, and it catches and prints any <code>IOExceptions</code> that occur.</p>
+</blockquote>
+<h4 id="methods-2">Methods</h4>
+
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Return Type</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>generateReport</code></td>
+<td><code>void</code></td>
+<td>message</td>
+</tr>
+</tbody>
+</table><h3 id="step-five-create-the-abstractvendingmachine-class-in-the-com.techelevator.vendingmachine-package">Step Five: Create the <code>AbstractVendingMachine</code> class in the <code>com.techelevator.vendingmachine</code> package</h3>
+<p>Create a new class called <code>AbstractVendingMachine.java</code> with the following requirements.</p>
 <h4 id="properties-2">Properties</h4>
 
 <table>
@@ -204,12 +248,12 @@
 </tr>
 </tbody>
 </table><h4 id="constructors-2">Constructors</h4>
-<p><code>VendingMachine</code> has one constructor:</p>
+<p><code>AbstractVendingMachine</code> has one constructor:</p>
 <ul>
 <li>It accepts a <code>String</code> parameter filepath.</li>
 <li>This constructor calls the method readInventory(filepath).</li>
 </ul>
-<h4 id="methods-1">Methods</h4>
+<h4 id="methods-3">Methods</h4>
 
 <table>
 <thead>
@@ -257,14 +301,6 @@
 <p>The <code>selectProduct</code> method returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
 <p>The <code>finishTransaction</code> method doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
 <p>The <code>printMessage</code> method returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
-<h3 id="step-three-create-the-salesreport-class">Step Three: Create the <code>SalesReport</code> class</h3>
-<p>Create a new class called <code>SalesReport.java</code> with the following requirements.</p>
-<h3 id="step-four-create-the-transaction-class">Step Four: Create the <code>Transaction</code> class</h3>
-<p>Create a new class called <code>Transaction.java</code> with the following requirements.</p>
-<h3 id="step-five-create-the-application-class">Step Five: Create the <code>Application</code> class</h3>
-<p>Create a new class called <code>Application.java</code> with the following requirements.</p>
-<h3 id="step-six-create-the-invventory-class">Step Six: Create the <code>Invventory</code> class</h3>
-<p>Create a new class called <code>Invventory.java</code> with the following requirements.</p>
-<h3 id="step-seven-update-the-unittest1-class">Step Seven: Update the <code>UnitTest1</code> class</h3>
-<p>Update the class called <code>UnitTest1.java</code> with the following requirements.</p>
+<h3 id="step-six-create-the-standardvendingmachine-class-in-the-com.techelevator.vendingmachine-package">Step Six: Create the <code>StandardVendingMachine</code> class in the <code>com.techelevator.vendingmachine</code> package</h3>
+<p>Create a new class called <code>StandardVendingMachine.java</code> with the following requirements.</p>
 
