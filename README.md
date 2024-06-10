@@ -17,7 +17,7 @@
 <tbody>
 <tr>
 <td><code>ProductType</code></td>
-<td>Lorem ipsor dolor sit ammet</td>
+<td>Manages the type associated with each product</td>
 </tr>
 <tr>
 <td><code>Product</code></td>
