@@ -65,7 +65,7 @@
 </tr>
 </tbody>
 </table><h2 id="classes">Classes</h2>
-<p>The core of this application consists of 4 packages, product, report, transaction, and vendingmachine and their respective 7 Classes, which you’ll create in the main package <code>com.techelevator</code>. Make sure to read through the requirements for each class before writing any code.</p>
+<p>The core of this application consists of <code>4 packages</code>, <code>product</code>, <code>report</code>, <code>transaction</code>, and <code>vendingmachine</code> and their respective <code>7 Classes</code>, which you’ll create in the main package <code>com.techelevator</code>. Make sure to read through the requirements for each class before writing any code.</p>
 <h3 id="step-one-create-the-producttype-enum-class-in-the-com.techelevator.product-package">Step One: Create the <code>ProductType</code> Enum class in the <code>com.techelevator.product</code> package</h3>
 <p>Create a new enum class called <code>ProductType.java</code> with the following requirements. The enum has 4 constants. Each constant represents a type of product.</p>
 <h4 id="enum-constants">Enum Constants</h4>
