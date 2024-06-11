@@ -301,6 +301,9 @@
 <p>The <code>finishTransaction</code> method doesn’t return any value. It  finalizes the transaction, usually dispensing change and resetting the balance.</p>
 <h3 id="step-six-create-the-standardvendingmachine-class-in-the-com.techelevator.vendingmachine-package">Step Six: Create the <code>StandardVendingMachine</code> class in the <code>com.techelevator.vendingmachine</code> package</h3>
 <p>Create a new class called <code>StandardVendingMachine.java</code> with the following requirements.</p>
+<blockquote>
+<p>The <code>StandardVendingMachine</code> class is a specific implementation of a vending machine, inheriting from the <code>AbstractVendingMachine</code> class. It provides concrete implementations for the abstract methods, defining how inventory is read, items are displayed, money is fed, products are selected, and transactions are finished. It utilizes the <code>Product</code>, <code>ProductType</code>, and <code>Transaction</code> classes to manage products and log transactions.</p>
+</blockquote>
 <p>The <code>readInventory</code> method overrides the readInventory in the AbstractVendingMachine abstract class. It doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
 <p>The <code>displayItems</code> method overrides the displayItems in the AbstractVendingMachine abstract class. It returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
 <p>The <code>feedMoney</code> method overrides the feedMoney in the AbstractVendingMachine abstract class. It doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
