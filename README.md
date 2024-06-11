@@ -218,7 +218,10 @@
 </tr>
 </tbody>
 </table><h3 id="step-five-create-the-abstractvendingmachine-class-in-the-com.techelevator.vendingmachine-package">Step Five: Create the <code>AbstractVendingMachine</code> class in the <code>com.techelevator.vendingmachine</code> package</h3>
-<p>Create a new class called <code>AbstractVendingMachine.java</code> with the following requirements.</p>
+<p>Create a new abstract class called <code>AbstractVendingMachine.java</code> with the following requirements.</p>
+<blockquote>
+<p>The <code>AbstractVendingMachine</code> class provides a blueprint for creating vending machine implementations by defining essential properties and methods that need to be implemented. It ensures that any subclass will have a consistent set of functionalities for handling products, money transactions, and displaying items, while leaving the specific details of these operations to be defined in the subclasses.</p>
+</blockquote>
 <h4 id="properties-2">Properties</h4>
 
 <table>
@@ -227,7 +230,6 @@
 <th>Property</th>
 <th>Data Type</th>
 <th>Get</th>
-<th>Set</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -236,15 +238,13 @@
 <td><code>inventory</code></td>
 <td><code>Map&lt;String, Product&gt;</code></td>
 <td>X</td>
-<td></td>
-<td>Lorem ipsum dolor sit.</td>
+<td>The inventory of products</td>
 </tr>
 <tr>
 <td><code>balance</code></td>
 <td><code>double</code></td>
 <td>X</td>
-<td></td>
-<td>Lorem ipsum dolor sit.</td>
+<td>The current balance or amount of money</td>
 </tr>
 </tbody>
 </table><h4 id="constructors-2">Constructors</h4>
@@ -252,7 +252,11 @@
 <ul>
 <li>It accepts a <code>String</code> parameter filepath.</li>
 <li>This constructor calls the method readInventory(filepath).</li>
+<li>It throws a FileNotFoundException</li>
 </ul>
+<blockquote>
+<p>This constructor initializes the vending machine by reading its inventory from a specified file. It calls the abstract method <code>readInventory</code> which must be implemented by subclasses.</p>
+</blockquote>
 <h4 id="methods-3">Methods</h4>
 
 <table>
@@ -289,18 +293,17 @@
 <td><code>void</code></td>
 <td>none</td>
 </tr>
-<tr>
-<td><code>printMessage</code></td>
-<td><code>void</code></td>
-<td>type</td>
-</tr>
 </tbody>
-</table><p>The <code>readInventory</code> method doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
-<p>The <code>displayItems</code> method returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
-<p>The <code>feedMoney</code> method doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
-<p>The <code>selectProduct</code> method returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
-<p>The <code>finishTransaction</code> method doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
-<p>The <code>printMessage</code> method returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
+</table><p>The <code>readInventory</code> method doesn’t return any value. Reads the inventory from a file and returns a map of products.</p>
+<p>The <code>displayItems</code> method returns a boolean value (<code>true</code> or <code>false</code>). Displays the available items in the vending machine.</p>
+<p>The <code>feedMoney</code> method doesn’t return any value. It accepts a double parameter <code>balance</code>. It adds  money to the machine’s balance.</p>
+<p>The <code>selectProduct</code> method returns a boolean value. It accepts a String parameter <code>slot</code>. It selects a product based on its slot code.</p>
+<p>The <code>finishTransaction</code> method doesn’t return any value. It  finalizes the transaction, usually dispensing change and resetting the balance.</p>
 <h3 id="step-six-create-the-standardvendingmachine-class-in-the-com.techelevator.vendingmachine-package">Step Six: Create the <code>StandardVendingMachine</code> class in the <code>com.techelevator.vendingmachine</code> package</h3>
 <p>Create a new class called <code>StandardVendingMachine.java</code> with the following requirements.</p>
+<p>The <code>readInventory</code> method overrides the readInventory in the AbstractVendingMachine abstract class. It doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
+<p>The <code>displayItems</code> method overrides the displayItems in the AbstractVendingMachine abstract class. It returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
+<p>The <code>feedMoney</code> method overrides the feedMoney in the AbstractVendingMachine abstract class. It doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
+<p>The <code>selectProduct</code> method overrides the selectProduct in the AbstractVendingMachine abstract class. It returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
+<p>The <code>finishTransaction</code> method overrides the finishTransaction in the AbstractVendingMachine abstract class. It doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
 
