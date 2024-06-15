@@ -48,10 +48,6 @@
 <td></td>
 </tr>
 <tr>
-<td><code>ProductTest</code></td>
-<td>Test cases for Product  Class</td>
-</tr>
-<tr>
 <td><code>SalesReportTest</code></td>
 <td>Test cases for SalesReport Class</td>
 </tr>
@@ -62,6 +58,10 @@
 <tr>
 <td><code>StandardVendingMachineTest</code></td>
 <td>Test cases for VendingMachine Class</td>
+</tr>
+<tr>
+<td><code>ApplicationTest</code></td>
+<td>Test cases for Application Class</td>
 </tr>
 </tbody>
 </table><h2 id="classes">Classes</h2>
@@ -134,51 +134,15 @@
 <td></td>
 <td>The purchase price for the product</td>
 </tr>
-<tr>
-<td><code>quantity</code></td>
-<td><code>int</code></td>
-<td>X</td>
-<td></td>
-<td>Total amount of product in a slot</td>
-</tr>
 </tbody>
-</table><h4 id="static-constants">Static constants</h4>
-<p>The default maximum amount for all product is 5 and is stored in a static constant variable of type <code>int</code>.</p>
-<h4 id="constructors-1">Constructors</h4>
+</table><h4 id="constructors-1">Constructors</h4>
 <p><code>Project</code> must have one constructor that accepts four parameters: <code>name</code>, <code>type</code>, <code>slot</code>, and <code>price</code>.</p>
-<blockquote>
-<p>Note: Make sure to initialize <code>slot</code> to the static constant you created. You can do this in the constructor.</p>
-</blockquote>
-<h4 id="methods">Methods</h4>
-
-<table>
-<thead>
-<tr>
-<th>Method Name</th>
-<th>Return Type</th>
-<th>Parameters</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>dispense</code></td>
-<td><code>void</code></td>
-<td>none</td>
-</tr>
-<tr>
-<td><code>isSoldOut</code></td>
-<td><code>boolean</code></td>
-<td>none</td>
-</tr>
-</tbody>
-</table><p>The <code>dispense</code> method doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
-<p>The <code>isSoldOut</code> method returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
 <h3 id="step-three-create-the-transaction-class-in-the-com.techelevator.transaction-package">Step Three: Create the <code>Transaction</code> class in the <code>com.techelevator.transaction</code> package</h3>
 <p>Create a new class called <code>Transaction.java</code> with the following requirements.</p>
 <blockquote>
 <p>The <code>Transaction</code> class’s <code>logTransaction</code> method logs a message to a file named <code>Log.txt</code>, prefixed with a timestamp. It uses the <code>SimpleDateFormat</code> class to format the timestamp and handles file writing with <code>PrintWriter</code> and <code>FileWriter</code> in a try-with-resources statement to ensure proper resource management. If an IOException occurs, it is caught and printed to the standard error stream.</p>
 </blockquote>
-<h4 id="methods-1">Methods</h4>
+<h4 id="methods">Methods</h4>
 
 <table>
 <thead>
@@ -200,7 +164,7 @@
 <blockquote>
 <p>The <code>SalesReport</code> class’s <code>generateReport</code> method generates a sales report file named with a timestamp. It iterates over the provided <code>inventory</code> of products, writes each product’s name and quantity sold to the file, calculates the total sales amount, and writes the total sales to the file. It handles file writing with a try-with-resources statement to ensure proper resource management, and it catches and prints any <code>IOExceptions</code> that occur.</p>
 </blockquote>
-<h4 id="methods-2">Methods</h4>
+<h4 id="methods-1">Methods</h4>
 
 <table>
 <thead>
@@ -257,7 +221,7 @@
 <blockquote>
 <p>This constructor initializes the vending machine by reading its inventory from a specified file. It calls the abstract method <code>readInventory</code> which must be implemented by subclasses.</p>
 </blockquote>
-<h4 id="methods-3">Methods</h4>
+<h4 id="methods-2">Methods</h4>
 
 <table>
 <thead>
