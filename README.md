@@ -243,7 +243,7 @@
 <ul>
 <li>It accepts a <code>String</code> parameter filepath.</li>
 <li>This constructor calls the method readInventory(filepath).</li>
-<li>It throws a FileNotFoundException</li>
+<li>It throws a FileNotFoundException.</li>
 </ul>
 <blockquote>
 <p>This constructor initializes the vending machine by reading its inventory from a specified file. It calls the abstract method <code>readInventory</code> which must be implemented by subclasses.</p>
@@ -295,6 +295,56 @@
 <blockquote>
 <p>The <code>StandardVendingMachine</code> class is a specific implementation of a vending machine, inheriting from the <code>AbstractVendingMachine</code> class. It provides concrete implementations for the abstract methods, defining how inventory is read, items are displayed, money is fed, products are selected, and transactions are finished. It utilizes the <code>Product</code>, <code>ProductType</code>, and <code>Transaction</code> classes to manage products and log transactions.</p>
 </blockquote>
+<h4 id="properties-3">Properties</h4>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>q</code></td>
+<td><code>Quantity</code></td>
+<td>Quantity Object to get default maximum quantity</td>
+</tr>
+<tr>
+<td><code>productQuantity</code></td>
+<td><code>Map&lt;String, Integer&gt;</code></td>
+<td>The current balance or amount of money</td>
+</tr>
+</tbody>
+</table><h4 id="constructors-3">Constructors</h4>
+<p><code>StandardVendingMachine</code> has one constructor:</p>
+<ul>
+<li>It inherits the AbstractVendingMachine constructor.</li>
+<li>It sets the productQuantity to a new LinkedHashMap.</li>
+<li>It calls the initializeProductQuantity method.</li>
+</ul>
+<blockquote>
+<p>This constructor initializes the vending machine by reading its inventory from a specified file. It calls the abstract method <code>readInventory</code> which must be implemented by subclasses.</p>
+</blockquote>
+<h4 id="methods-4">Methods</h4>
+
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Return Type</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>initializeProductQuantity</code></td>
+<td><code>void</code></td>
+<td></td>
+</tr>
+</tbody>
+</table><p>The <code>initializeProductQuantity</code> method loops through the inventory keySet with a slot:String variable, using the put method to update the slot: key and default maximum quantity: value.</p>
 <p>The <code>readInventory</code> method overrides the readInventory in the AbstractVendingMachine abstract class. It doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
 <p>The <code>displayItems</code> method overrides the displayItems in the AbstractVendingMachine abstract class. It returns a boolean value (<code>true</code> or <code>false</code>). if the <code>quantity</code> of the product is equal to 0, it returns <code>true</code> eelse <code>false</code>.</p>
 <p>The <code>feedMoney</code> method overrides the feedMoney in the AbstractVendingMachine abstract class. It doesn’t return any value. If there are items left in the vending machine, decrements the <code>quantity</code> of the product by one when it’s dispensed.</p>
