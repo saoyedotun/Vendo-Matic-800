@@ -92,7 +92,7 @@
 </table><h4 id="constructors">Constructors</h4>
 <p><code>ProjectType</code> must have one constructor that accepts one parameter: <code>message</code></p>
 <h3 id="step-two-create-the-product-class-in-the-com.techelevator.product-package">Step Two: Create the <code>Product</code> class in the <code>com.techelevator.product</code> package</h3>
-<p>Create a new class called <code>Product.java</code> with the following requirements. The Product has 6 variables, including the default maximum quantity constant.</p>
+<p>Create a new class called <code>Product.java</code> with the following requirements. The Product has 4 variables.</p>
 <h4 id="properties-1">Properties</h4>
 
 <table>
@@ -107,25 +107,18 @@
 </thead>
 <tbody>
 <tr>
-<td><code>name</code></td>
-<td><code>String</code></td>
-<td>X</td>
-<td></td>
-<td>The display name of the vending machine product</td>
-</tr>
-<tr>
-<td><code>type</code></td>
-<td><code>ProductType</code></td>
-<td>X</td>
-<td></td>
-<td>The product type for this row</td>
-</tr>
-<tr>
 <td><code>slot</code></td>
 <td><code>String</code></td>
 <td>X</td>
 <td></td>
 <td>The slot location in the vending machine</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>String</code></td>
+<td>X</td>
+<td></td>
+<td>The display name of the vending machine product</td>
 </tr>
 <tr>
 <td><code>price</code></td>
@@ -134,9 +127,16 @@
 <td></td>
 <td>The purchase price for the product</td>
 </tr>
+<tr>
+<td><code>type</code></td>
+<td><code>ProductType</code></td>
+<td>X</td>
+<td></td>
+<td>The product type for this row</td>
+</tr>
 </tbody>
 </table><h4 id="constructors-1">Constructors</h4>
-<p><code>Project</code> must have one constructor that accepts four parameters: <code>name</code>, <code>type</code>, <code>slot</code>, and <code>price</code>.</p>
+<p><code>Project</code> must have one constructor that accepts four parameters: <code>slot</code>, <code>name</code>, <code>price</code>, and <code>type</code>.</p>
 <h3 id="step-three-create-the-transaction-class-in-the-com.techelevator.transaction-package">Step Three: Create the <code>Transaction</code> class in the <code>com.techelevator.transaction</code> package</h3>
 <p>Create a new class called <code>Transaction.java</code> with the following requirements.</p>
 <blockquote>
