@@ -26,7 +26,7 @@
 </tr>
 <tr>
 <td><code>Quantity</code></td>
-<td>The default maximum quantity a slot holds per product</td>
+<td>Manages the default maximum quantity a slot holds per product</td>
 </tr>
 <tr>
 <td><code>AbstractVendingMachine</code></td>
@@ -51,6 +51,10 @@
 <tr>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td><code>QuantityTest</code></td>
+<td>Test cases for Quantity Class</td>
 </tr>
 <tr>
 <td><code>SalesReportTest</code></td>
@@ -141,7 +145,7 @@
 <h3 id="step-three-create-the-quantity-class-in-the-com.techelevator.transaction-package">Step Three: Create the <code>Quantity</code> class in the <code>com.techelevator.transaction</code> package</h3>
 <p>Create a new class called <code>Quantity.java</code> with the following requirements.</p>
 <blockquote>
-<p>The The <code>Quantity</code> class’s <code>getDefaultMaximumQuantity</code> method returns 5.</p>
+<p>The <code>Quantity</code> class’s <code>getDefaultMaximumQuantity</code> method returns 5.</p>
 </blockquote>
 <h4 id="methods">Methods</h4>
 
