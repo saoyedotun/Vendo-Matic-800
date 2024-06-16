@@ -25,6 +25,10 @@
 <td>Represents an item in the vending machine</td>
 </tr>
 <tr>
+<td><code>Quantity</code></td>
+<td>The default maximum quantity a slot holds per product</td>
+</tr>
+<tr>
 <td><code>AbstractVendingMachine</code></td>
 <td>Manages the inventory and operations of the vending machine</td>
 </tr>
@@ -134,12 +138,34 @@
 </tbody>
 </table><h4 id="constructors-1">Constructors</h4>
 <p><code>Project</code> must have one constructor that accepts four parameters: <code>slot</code>, <code>name</code>, <code>price</code>, and <code>type</code>.</p>
-<h3 id="step-three-create-the-transaction-class-in-the-com.techelevator.transaction-package">Step Three: Create the <code>Transaction</code> class in the <code>com.techelevator.transaction</code> package</h3>
+<h3 id="step-three-create-the-quantity-class-in-the-com.techelevator.transaction-package">Step Three: Create the <code>Quantity</code> class in the <code>com.techelevator.transaction</code> package</h3>
+<p>Create a new class called <code>Quantity.java</code> with the following requirements.</p>
+<blockquote>
+<p>The The <code>Quantity</code> class’s <code>getDefaultMaximumQuantity</code> method returns 5.</p>
+</blockquote>
+<h4 id="methods">Methods</h4>
+
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Return Type</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getDefaultMaximumQuantity</code></td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+</tbody>
+</table><h3 id="step-four-create-the-transaction-class-in-the-com.techelevator.transaction-package">Step Four: Create the <code>Transaction</code> class in the <code>com.techelevator.transaction</code> package</h3>
 <p>Create a new class called <code>Transaction.java</code> with the following requirements.</p>
 <blockquote>
 <p>The <code>Transaction</code> class’s <code>logTransaction</code> method logs a message to a file named <code>Log.txt</code>, prefixed with a timestamp. It uses the <code>SimpleDateFormat</code> class to format the timestamp and handles file writing with <code>PrintWriter</code> and <code>FileWriter</code> in a try-with-resources statement to ensure proper resource management. If an IOException occurs, it is caught and printed to the standard error stream.</p>
 </blockquote>
-<h4 id="methods">Methods</h4>
+<h4 id="methods-1">Methods</h4>
 
 <table>
 <thead>
@@ -156,12 +182,12 @@
 <td>message</td>
 </tr>
 </tbody>
-</table><h3 id="step-four-create-the-salesreport-class-in-the-com.techelevator.report-package">Step Four: Create the <code>SalesReport</code> class in the <code>com.techelevator.report</code> package</h3>
+</table><h3 id="step-five-create-the-salesreport-class-in-the-com.techelevator.report-package">Step Five: Create the <code>SalesReport</code> class in the <code>com.techelevator.report</code> package</h3>
 <p>Create a new class called <code>SalesReport.java</code> with the following requirements.</p>
 <blockquote>
 <p>The <code>SalesReport</code> class’s <code>generateReport</code> method generates a sales report file named with a timestamp. It iterates over the provided <code>inventory</code> of products, writes each product’s name and quantity sold to the file, calculates the total sales amount, and writes the total sales to the file. It handles file writing with a try-with-resources statement to ensure proper resource management, and it catches and prints any <code>IOExceptions</code> that occur.</p>
 </blockquote>
-<h4 id="methods-1">Methods</h4>
+<h4 id="methods-2">Methods</h4>
 
 <table>
 <thead>
@@ -178,7 +204,7 @@
 <td>message</td>
 </tr>
 </tbody>
-</table><h3 id="step-five-create-the-abstractvendingmachine-class-in-the-com.techelevator.vendingmachine-package">Step Five: Create the <code>AbstractVendingMachine</code> class in the <code>com.techelevator.vendingmachine</code> package</h3>
+</table><h3 id="step-six-create-the-abstractvendingmachine-class-in-the-com.techelevator.vendingmachine-package">Step Six: Create the <code>AbstractVendingMachine</code> class in the <code>com.techelevator.vendingmachine</code> package</h3>
 <p>Create a new abstract class called <code>AbstractVendingMachine.java</code> with the following requirements.</p>
 <blockquote>
 <p>The <code>AbstractVendingMachine</code> class provides a blueprint for creating vending machine implementations by defining essential properties and methods that need to be implemented. It ensures that any subclass will have a consistent set of functionalities for handling products, money transactions, and displaying items, while leaving the specific details of these operations to be defined in the subclasses.</p>
@@ -218,7 +244,7 @@
 <blockquote>
 <p>This constructor initializes the vending machine by reading its inventory from a specified file. It calls the abstract method <code>readInventory</code> which must be implemented by subclasses.</p>
 </blockquote>
-<h4 id="methods-2">Methods</h4>
+<h4 id="methods-3">Methods</h4>
 
 <table>
 <thead>
@@ -260,7 +286,7 @@
 <p>The <code>feedMoney</code> method doesn’t return any value. It accepts a double parameter <code>balance</code>. It adds  money to the machine’s balance.</p>
 <p>The <code>selectProduct</code> method returns a boolean value. It accepts a String parameter <code>slot</code>. It selects a product based on its slot code.</p>
 <p>The <code>finishTransaction</code> method doesn’t return any value. It  finalizes the transaction, usually dispensing change and resetting the balance.</p>
-<h3 id="step-six-create-the-standardvendingmachine-class-in-the-com.techelevator.vendingmachine-package">Step Six: Create the <code>StandardVendingMachine</code> class in the <code>com.techelevator.vendingmachine</code> package</h3>
+<h3 id="step-seven--create-the-standardvendingmachine-class-in-the-com.techelevator.vendingmachine-package">Step Seven : Create the <code>StandardVendingMachine</code> class in the <code>com.techelevator.vendingmachine</code> package</h3>
 <p>Create a new class called <code>StandardVendingMachine.java</code> with the following requirements.</p>
 <blockquote>
 <p>The <code>StandardVendingMachine</code> class is a specific implementation of a vending machine, inheriting from the <code>AbstractVendingMachine</code> class. It provides concrete implementations for the abstract methods, defining how inventory is read, items are displayed, money is fed, products are selected, and transactions are finished. It utilizes the <code>Product</code>, <code>ProductType</code>, and <code>Transaction</code> classes to manage products and log transactions.</p>
