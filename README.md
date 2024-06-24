@@ -5,7 +5,7 @@
 
 <h1 id="module-1-capstone---vending-machine-software--v-1.0.0">Module 1 Capstone - Vending Machine Software  (V 1.0.0)</h1>
 <p>You’re developing an application for the newest vending machine distributor, Umbrella Corp. They’ve released a new vending machine, Vendo-Matic 800, that’s integrated with everyone’s bank accounts, allowing customers to purchase products from their computers for their convenience.</p>
-<p>See: <a href="https://docs.google.com/document/d/1XaVVdYm9wQ1N09_7VvX2BDrTVYbfGDa0tWz2zNUwDrU/edit">User Stories</a>, <a href="https://trello.com/invite/b/dDOmyVq9/ATTI3c72f8159df94a0b48e0645c265d4ee3546DA34C/vending-machine-software">Trello Board</a></p>
+<p>See: <a href="https://github.com/saoyedotun/VendoMatic800">Project</a>, <a href="https://docs.google.com/document/d/1XaVVdYm9wQ1N09_7VvX2BDrTVYbfGDa0tWz2zNUwDrU/edit">User Stories</a>, <a href="https://trello.com/invite/b/dDOmyVq9/ATTI3c72f8159df94a0b48e0645c265d4ee3546DA34C/vending-machine-software">Trello Board</a></p>
 <p>Classes require to develop the vending machine software as well as their Test classes.</p>
 
 <table>
